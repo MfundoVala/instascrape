@@ -6,6 +6,11 @@ function NavBar() {
   const [flyer, setFlyer] = useState(false);
   const [flyerTwo, setFlyerTwo] = useState(false);
 
+  const disableLink = (e) => {
+    e.preventDefault();
+    // You can add any custom logic here if needed
+  };
+
   return (
     <>
       <div className="relative bg-white">
@@ -121,6 +126,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/cursor-click */}
@@ -151,6 +157,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/shield-check */}
@@ -180,6 +187,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/view-grid */}
@@ -210,6 +218,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/refresh */}
@@ -243,6 +252,7 @@ function NavBar() {
                       <div className="flow-root">
                         <a
                           href="/"
+                          onClick={disableLink}
                           className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                         >
                           {/* Heroicon name: outline/play */}
@@ -273,6 +283,7 @@ function NavBar() {
                       <div className="flow-root">
                         <a
                           href="/"
+                          onClick={disableLink}
                           className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                         >
                           {/* Heroicon name: outline/phone */}
@@ -301,12 +312,14 @@ function NavBar() {
 
               <a
                 href="/"
+                onClick={disableLink}
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Pricing
               </a>
               <a
                 href="/"
+                onClick={disableLink}
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Docs
@@ -367,6 +380,7 @@ function NavBar() {
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/support */}
@@ -397,6 +411,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/bookmark-alt */}
@@ -427,6 +442,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/calendar */}
@@ -457,6 +473,7 @@ function NavBar() {
                       </a>
                       <a
                         href="/"
+                        onClick={disableLink}
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                       >
                         {/* Heroicon name: outline/shield-check */}
@@ -494,6 +511,7 @@ function NavBar() {
                           <li className="text-base truncate">
                             <a
                               href="/"
+                              onClick={disableLink}
                               className="font-medium text-gray-900 hover:text-gray-700"
                             >
                               Boost your conversion rate
@@ -502,6 +520,7 @@ function NavBar() {
                           <li className="text-base truncate">
                             <a
                               href="/"
+                              onClick={disableLink}
                               className="font-medium text-gray-900 hover:text-gray-700"
                             >
                               How to use search engine optimization to drive
@@ -511,6 +530,7 @@ function NavBar() {
                           <li className="text-base truncate">
                             <a
                               href="/"
+                              onClick={disableLink}
                               className="font-medium text-gray-900 hover:text-gray-700"
                             >
                               Improve your customer experience
@@ -521,6 +541,7 @@ function NavBar() {
                       <div className="mt-5 text-sm">
                         <a
                           href="/"
+                          onClick={disableLink}
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           {" "}
@@ -535,12 +556,14 @@ function NavBar() {
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="/"
+                onClick={disableLink}
                 className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Login
               </a>
               <a
                 href="/"
+                onClick={disableLink}
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
               >
                 Sign up
@@ -606,6 +629,7 @@ function NavBar() {
                 <nav className="grid gap-y-8">
                   <a
                     href="/"
+                    onClick={disableLink}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/chart-bar */}
@@ -630,6 +654,7 @@ function NavBar() {
                   </a>
                   <a
                     href="/"
+                    onClick={disableLink}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/cursor-click */}
@@ -654,6 +679,7 @@ function NavBar() {
                   </a>
                   <a
                     href="/"
+                    onClick={disableLink}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/shield-check */}
@@ -678,6 +704,7 @@ function NavBar() {
                   </a>
                   <a
                     href="/"
+                    onClick={disableLink}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/view-grid */}
@@ -702,6 +729,7 @@ function NavBar() {
                   </a>
                   <a
                     href="/"
+                    onClick={disableLink}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
                     {/* Heroicon name: outline/refresh */}
@@ -731,48 +759,56 @@ function NavBar() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Pricing
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Docs
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Enterprise
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Blog
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Help Center
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Guides
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Security
                 </a>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Events
@@ -781,13 +817,18 @@ function NavBar() {
               <div>
                 <a
                   href="/"
+                  onClick={disableLink}
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Sign up
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?
-                  <a href="/" className="text-indigo-600 hover:text-indigo-500">
+                  <a
+                    href="/"
+                    onClick={disableLink}
+                    className="text-indigo-600 hover:text-indigo-500"
+                  >
                     Sign in
                   </a>
                 </p>
