@@ -149,7 +149,7 @@ function Search() {
           </div>
         ) : (
           <div className="w-full items-center justify-center flex">
-            <div className="md:w-[80%] flex-wrap gap-2 self-center items-start justify-start flex p-12">
+            <div className="w-[80%] flex-wrap gap-2 self-center items-start justify-start flex p-12">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
                 return <HoverCard key={item} isLoading={true} />;
               })}

@@ -85,20 +85,6 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
-    public function runApifyActorSync(Request $request) {
-        $hashtag = $request->hashtag ?? 'cake';
-        $max_posts = $request->max_posts ?? 3;
-        $apifyUrl = "https://api.apify.com/v2/acts/apify~instagram-hashtag-scraper/run-sync-get-dataset-items?token=". env('APIFY_TOKEN');
-        $response = Http::post($apifyUrl, [
-            'hashtags' => [ $hashtag ],
-            'resultsLimit' => $max_posts,
-            'format' => 'json',
-            'waitForFinish' => 0,
-        ]);
-        Log::info($response->json());
-        return response()->json($response->json());
-    }
-
     public function getApifyRunHashtagNames(Request $request) {
         $run = $request->runId ?? "last";
         $apifyUrl = "https://api.apify.com/v2/acts/apify~instagram-hashtag-scraper/runs/". $run ."/request-queue/requests?token=". env('APIFY_TOKEN');
