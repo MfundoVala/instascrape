@@ -1,6 +1,7 @@
 # Instagram Hashtag Search Tool
 
-https://github.com/MfundoVala/instascrape/raw/main/video.mp4
+https://github.com/MfundoVala/instascrape/assets/71990245/a122717f-1306-40ed-bd13-c51dde16ab30
+
 
 ## Objective
 Develop a web-based tool that empowers users to explore Instagram posts associated with specific hashtags. The tool seamlessly integrates the Apify API, persists results in a Laravel-backed database, and offers a user-friendly React-based frontend. Additionally, a machine-to-machine API endpoint is implemented for programmatic access to search functionality.
