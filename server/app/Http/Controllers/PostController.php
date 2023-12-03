@@ -81,7 +81,7 @@ class PostController extends Controller
 
     public function getDatabasePostsByHashtag(Request $request) {
         $hashtag = $request->hashtag;
-        $posts = Post::where('hashtagId', $hashtag)->get();
+        $posts = Post::where('hashtagId', strtolower($hashtag))->orderBy('post_created_time', 'desc')->get();
         return response()->json($posts);
     }
 

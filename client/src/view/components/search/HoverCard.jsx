@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const ImageCard = ({
   imageUrl,
@@ -31,10 +33,16 @@ const ImageCard = ({
       />
 
       {isHovered && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-          <div>
-            <p className="text-l font-semi-bold mb-2">{likes} Likes</p>
-            <p className="text-l font-semi-bold">{comments} Comments</p>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 text-white">
+          <div className="flex flex-row gap-8">
+            <p className="text-xl font-bold mb-2">
+              <FontAwesomeIcon icon={faHeart} className="mr-1" />
+              {likes}
+            </p>
+            <p className="text-xl font-bold">
+              <FontAwesomeIcon icon={faComment} className="mr-1" />
+              {comments}
+            </p>
           </div>
           <div className="absolute bottom-0 mb-2 bg-white bg-opacity-75 px-2 py-1 rounded-xs">
             <p className="text-sm font-semi-bold text-black">@{username}</p>

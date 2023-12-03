@@ -93,20 +93,20 @@ function Search() {
               <div className="flex flex-row justify-end md:w-[80%]">
                 <div className="group flex">
                   <button
-                    className="bg-transparent hover:bg-accent-purple  p-2 text-purple font-bold rounded-sm self-end"
+                    className="bg-transparent hover:bg-accent-purple  p-3 mb-2 text-purple font-bold rounded-full self-end"
                     onClick={() => handleScrape(query)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      viewBox="0 0 25 25"
-                      stroke="none"
+                      viewBox="0 0 24 24"
+                      stroke="#714CF9"
                       fill="#714CF9"
                       className="scale-x-1"
                       id="refresh-icon"
                     >
-                      <path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z" />
+                      <path d="M20.944 12.979c-.489 4.509-4.306 8.021-8.944 8.021-2.698 0-5.112-1.194-6.763-3.075l1.245-1.633c1.283 1.645 3.276 2.708 5.518 2.708 3.526 0 6.444-2.624 6.923-6.021h-2.923l4-5.25 4 5.25h-3.056zm-15.864-1.979c.487-3.387 3.4-6 6.92-6 2.237 0 4.228 1.059 5.51 2.698l1.244-1.632c-1.65-1.876-4.061-3.066-6.754-3.066-4.632 0-8.443 3.501-8.941 8h-3.059l4 5.25 4-5.25h-2.92z" />
                     </svg>
                   </button>
                   <div className="relative z-10 top-full left-0 mt-2 bg-ttagz-yellow text-black p-2 rounded-full px-4 shadow-md opacity-0 group-hover:opacity-80 transition-opacity">
