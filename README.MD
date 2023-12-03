@@ -1,5 +1,7 @@
 # Instagram Hashtag Search Tool
 
+<video src="https://github.com/MfundoVala/instascrape/blob/main/video.mp4" width=180 ></video>
+
 ## Objective
 Develop a web-based tool that empowers users to explore Instagram posts associated with specific hashtags. The tool seamlessly integrates the Apify API, persists results in a Laravel-backed database, and offers a user-friendly React-based frontend. Additionally, a machine-to-machine API endpoint is implemented for programmatic access to search functionality.
 
@@ -79,5 +81,4 @@ Contributions are encouraged! Feel free to submit issues or pull requests to enh
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-<video src="https://github.com/MfundoVala/instascrape/blob/main/video.mp4" width=180 />
 
