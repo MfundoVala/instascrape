@@ -11,7 +11,7 @@ function App() {
         >
           <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Search />} />
             <Route path="/hashtag-search" element={<Search />} />
             <Route path="*" element={<NotFound />} />
 

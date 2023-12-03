@@ -12,6 +12,7 @@ module.exports = {
         "secondary-purple": "#F5E8FE",
         "accent-purple": "#F7F2FB",
         "purple-dark": "#2F1A44",
+        "ttagz-yellow": "#FAD74A",
         white: "#FFFDFB",
       },
     },

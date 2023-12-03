@@ -12,48 +12,6 @@ use Illuminate\Support\Facades\Log;
 
 class PostController extends Controller
 {
-    //
-    public function scraperScrapePostsByHashtag(Request $request) {
-        $hashtag = $request->hashtag;
-        //$hashtagId = $graphAPI->getHashTagCode()?; // will be real hashtag id when using Instagram graph API
-        $num_posts = $request->num_posts;
-
-        $instagram = new \InstagramScraper\Instagram();
-        $medias = $instagram->getMediasByTag($hashtag, $num_posts);
-        $posts = [];
-
-        foreach($medias as $media) {
-            $post = new Post();
-            $post->post_id = $media->id;
-            $post->hashtagId = $request->hashtag; // will be real hashtag id when using Instagram graph API
-            $post->post_created_time = $media->createdTime;
-            $post->type = $media->type;
-            $post->link = $media->link;
-            $post->image_low_resolution_url = $media->imageLowResolutionUrl;
-            $post->image_thumbnail_url = $media->imageThumbnailUrl;
-            $post->image_standard_resolution_url = $media->imageStandardResolutionUrl;
-            $post->image_high_resolution_url = $media->imageHighResolutionUrl;
-            $post->caption = $media->caption;
-            $post->caption_is_edited = $media->captionIsEdited;
-            $post->is_ad = $media->isAd;
-            $post->video_low_resolution_url = $media->videoLowResolutionUrl;
-            $post->video_standard_resolution_url = $media->videoStandardResolutionUrl;
-            $post->video_low_bandwidth_url = $media->videoLowBandwidthUrl;
-            $post->video_views = $media->videoViews;
-            $post->code = $media->code;
-            $post->owner = $media->owner;
-            $post->owner_id = $media->ownerId;
-            $post->likes_count = $media->likesCount;
-            $post->location_id = $media->locationId;
-            $post->location_name = $media->locationName;
-            $post->comments_count = $media->commentsCount;
-            array_push($posts, $post);
-            $post->save();
-        }
-
-        return response()->json($posts);
-        
-    }
 
     public function apifyScrapePostsByHashtag(Request $request) {
         Log::info($request);

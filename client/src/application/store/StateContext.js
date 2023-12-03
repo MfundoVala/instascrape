@@ -7,6 +7,7 @@ const brandColors = {
   accent: "#F7F2FB",
   purple: "#2F1A44",
   white: "#FFFDFB",
+  yellow: "#FAD74A",
 };
 
 const ContextProvider = ({ children }) => {
