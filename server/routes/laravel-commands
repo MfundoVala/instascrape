@@ -1,0 +1,12 @@
+composer create-project laravel/laravel [project name]
+php artisan make:model [model name] -m
+php artisan make:controller [controller name]
+php artisan make:notification [notification name]
+php artisan make:migration [create_table_name]
+php artisan migrate
+php artisan serve
+
+
+---- seeding  ----
+php artisan make:factory DepartmentFactory
+php artisan db:seed --class=DepartmentSeeder

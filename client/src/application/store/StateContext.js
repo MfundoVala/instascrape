@@ -11,9 +11,12 @@ const brandColors = {
 
 const ContextProvider = ({ children }) => {
   const [state, setState] = useState({});
+  const [items, setItems] = useState(null);
 
   return (
-    <StateContext.Provider value={[state, setState, brandColors]}>
+    <StateContext.Provider
+      value={[state, setState, brandColors, items, setItems]}
+    >
       {children}
     </StateContext.Provider>
   );

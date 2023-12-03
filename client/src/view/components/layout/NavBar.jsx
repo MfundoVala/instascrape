@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IMAGES } from "../../assets";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -11,10 +12,24 @@ function NavBar() {
     // You can add any custom logic here if needed
   };
 
+  window.onscroll = function () {
+    // console.log(window.pageYOffset);
+    if (window.pageYOffset > 50) {
+      document.getElementById("navy").classList.remove("bg-transparent");
+      document.getElementById("nav-contany").classList.add("shadow-md");
+    } else {
+      document.getElementById("navy").classList.add("bg-transparent");
+      document.getElementById("nav-contany").classList.remove("shadow-md");
+    }
+  };
+
   return (
     <>
-      <div className="relative bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 rounded-b-[1.5rem] shadow-md">
+      <div className="w-full bg-transparent fixed z-10 top-0" id="navy">
+        <div
+          className="max-w-6xl mx-auto px-4 bg-white sm:px-6 rounded-b-[1.5rem] shadow-md transition ease-out duration-200"
+          id="nav-contany"
+        >
           <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
@@ -120,7 +135,8 @@ function NavBar() {
                             HashTag Search
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            View analytics and insights for your hashtags.
+                            View analytics and insights for your Instagram
+                            hashtags.
                           </p>
                         </div>
                       </a>
@@ -585,7 +601,7 @@ function NavBar() {
         <div
           className={
             open
-              ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              ? "opacity-100 scale-100 ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               : "opacity-0 scale-95 hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           }
         >

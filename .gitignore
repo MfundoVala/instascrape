@@ -129,7 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-
+env.js
 /.phpunit.cache
 /node_modules
 /public/build

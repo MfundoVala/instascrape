@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,33 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get(
+    '/getHashtagPosts',
+    [PostController::class, 'scrapePostsByHashtag']
+);
+
+Route::get(
+    '/getAccessToken',
+    [AuthController::class, 'getAccessToken']
+);
+
+Route::get(
+    '/scrapePostsByHashtag',
+    [PostController::class, 'apifyScrapePostsByHashtag']
+);
+
+Route::get(
+    '/getApifyRunHashtagNames',
+    [PostController::class, 'getApifyRunHashtagNames']
+);
+
+Route::get(
+    '/getHashtagPosts',
+    [PostController::class, 'getDatabasePostsByHashtag']
+);
+
+Route::get(
+    '/runApifyActorSync',
+    [PostController::class, 'runApifyActorSync']
+);

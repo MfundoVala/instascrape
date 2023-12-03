@@ -6,7 +6,15 @@ module.exports = {
       display: ["Rubik", "sans-serif"],
       body: ["Rubik", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "primary-purple": "#714CF9",
+        "secondary-purple": "#F5E8FE",
+        "accent-purple": "#F7F2FB",
+        "purple-dark": "#2F1A44",
+        white: "#FFFDFB",
+      },
+    },
   },
   plugins: [],
 };
