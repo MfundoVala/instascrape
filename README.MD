@@ -1,4 +1,4 @@
-# Instagram Hashtag Search Tool
+# Instascrape - Instagram Hashtag Search Tool
 
 https://github.com/MfundoVala/instascrape/assets/71990245/a122717f-1306-40ed-bd13-c51dde16ab30
 
@@ -34,7 +34,7 @@ Develop a web-based tool that empowers users to explore Instagram posts associat
 2. **Install Dependencies:**
    - Navigate to the project root directory and install the dependencies for both the React frontend and Laravel backend:
      ```bash
-     cd instagram-hashtag-tool
+     cd instascrape
      cd client && npm install
      cd ../server && composer install
      ```
